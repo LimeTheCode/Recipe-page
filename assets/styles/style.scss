@@ -8,21 +8,30 @@
   padding: 122px 0;
   &-container {
     width: 100%;
+    min-width: 320px;
     max-width: 735px;
     background-color: $white;
-    padding: 40px 0;
     border-radius: 20px;
+    padding-bottom: 30px;
+    @media (min-width: 576px) {
+      padding: 40px 0 30px;
+    }
   }
   &-banner {
-    padding: 0 40px;
     margin-bottom: 40px;
+    @media (min-width: 576px) {
+      padding: 0 40px;
+    }
     &__img {
       width: 100%;
       border-radius: 20px;
     }
   }
   &-content {
-    padding: 0 40px;
+    padding: 0 32px;
+    @media (min-width: 576px) {
+      padding: 0 40px;
+    }
     &__intro {
       margin-bottom: 35px;
     }
@@ -44,10 +53,13 @@
     font-size: 28px;
     margin-bottom: 26px;
     &--main {
-      font-size: 42px;
+      font-size: 38px;
       color: $dark-stone;
-      letter-spacing: -1px;
       margin-bottom: 23px;
+      letter-spacing: -1px;
+      @media (min-width: 576px) {
+        font-size: 42px;
+      }
     }
     &--box {
       font-family: $bold-font;
@@ -88,14 +100,34 @@
     }
   }
   &-table {
-    margin-top: 8px;
+    margin-top: 11px;
     width: 100%;
     &__row {
       border-bottom: 1px solid $gray-stone;
     }
     &__cell {
       font-family: $regular-font;
-      padding: 19px 0 15px 0;
+      padding: 16px 0 15px 0;
+      width: 50%;
+      padding-left: 30px;
+      color: $dark-gray-stone;
+      &:nth-of-type(2) {
+        font-family: $bold-font;
+        padding-left: 10px;
+        color: $brown;
+      }
     }
+  }
+}
+
+.footer {
+  background: $dark-gray-stone;
+  font-family: $regular-font;
+  text-align: center;
+  padding: 20px;
+  color: $white;
+  a {
+    font-family: $bold-font;
+    color: $light-stone;
   }
 }
